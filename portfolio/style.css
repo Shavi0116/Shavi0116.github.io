@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+header {
+    background-color:rgb(113, 175, 225);
+    color: white;
+    padding: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#name {
+    font-size: 27px;
+}
+#list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#list li {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+
