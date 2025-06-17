@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h3>This is my first project</h3>
+     <div class="container">
+    <h2 id="form-title">Login</h2>
+
+    <form id="auth-form">
+      <input type="text" id="name" placeholder="Enter name" style="display: none;" />
+      <input type="email" placeholder="Enter email" required />
+      <input type="password" placeholder="Enter password" required />
+      <input type="submit" value="Login" />
+    </form>
+
+    <p id="toggle-text">Don't have an account? <button id="toggle-btn">Create one</button></p>
+  </div>
+
+    <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const formTitle = document.getElementById("form-title");
+    const nameField = document.getElementById("name");
+    const submitBtn = document.querySelector("input[type='submit']");
+    let isLogin = true;
+
+    toggleBtn.addEventListener("click", () => {
+      isLogin = !isLogin;
+
+      if (isLogin) {
+        formTitle.innerText = "Login";
+        nameField.style.display = "none";
+        submitBtn.value = "Login";
+        toggleBtn.innerText = "Create one";
+      } else {
+        formTitle.innerText = "Create Account";
+        nameField.style.display = "block";
+        submitBtn.value = "Create";
+        toggleBtn.innerText = "Login instead";
+      }
+    });
+  </script>
 </body>
 </html>
