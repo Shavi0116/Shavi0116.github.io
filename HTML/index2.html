@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Tags</h1>
+    <!-- <form action="serverfile" method="post"> -->
+    <form>
+        <p><input type="text" required autofocus maxlength="5" placeholder="enter something"></p><!--using autofocus the cursor would be already in the textbox and we dont have to manually click in the textbo to fill it out-->
+        <p><input type="text" value="Knox" readonly disabled size="10px"></p><!--value gives the default value and if we use readonly then the user cant change the value and disabled wont even let you take the cursor in the textbox-->
+        <button>Submit</button>
+    </form>
+
+    <fieldset>
+        <legend>Login Form</legend>
+        <form>
+            <p>
+                <input type="email" placeholder="Enter address" required>
+            </p>
+            <p>
+                <input type="password" placeholder="password" required>
+            </p>
+            <button>Login</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Register Form</legend>
+    <form>
+        <p><input type="text" name="fname" placeholder="Enter name " required></p>
+        <p><input type="email" name="fname" placeholder="email address " required></p>
+        <input type="password" name="password" placeholder="password" required>
+        <p>Age:<input type="number"></p>
+        <p><input type="date"></p>
+        <p>
+            <input type="checkbox"> MERN
+            <input type="checkbox" checked> Java Full Stack
+            <input type="checkbox"> Python Full Stack
+        </p>
+        <p>
+            <input type="radio" >Morning batch
+            <input type="radio" checked>Evening batch
+        </p>
+        <p>
+        <select>
+            <option>MBA</option>
+            <option selected>BTECH</option>
+            <option>Design</option>
+        </select>
+        </p>
+        <p>
+            <select>
+                <optgroup label="India">
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Hyderabad</option>
+                </optgroup>
+                <optgroup label="USA"> 
+                    <option>Mimai</option>
+                    <option>LA</option>
+                    <option>Columbus</option>
+                </optgroup>
+            </select>
+        </p>
+        <p><textarea rows="4" cols="50" placeholder="About me"></textarea></p>
+        <p>
+            <input type="file">
+        </p>
+        <p>
+            <label for="rem">Remember me</label><input type="checkbox" id="rem"><!--we used label so that we can click anywhere and still select the checkbox-->
+        </p>
+        <input type="reset">
+    <button>Register</button>
+    </form>
+     </fieldset>
+</body>
+</html>
